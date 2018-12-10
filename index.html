@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test FORM</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        //TODO: FIX CODE
+        //change to an object
+        function getAccountInfo() {
+            var fName = document.getElementById('fname').value;
+            var lName = document.getElementById('lname').value;
+            var address = document.getElementById('address').value;
+            var city = document.getElementById('city').value;
+            var zipCode = document.getElementById('zipcode').value;
+
+            var addressCopy = document.getElementById("addressCopy").checked;
+            var addressEntry = document.getElementById('addressEntry').checked;
+
+            //if use address for shipping is checked show shipping
+            /*
+            *   if(addressCopy == false){
+            *
+            *   if use separate address for shipping is checked show div "shippingInputBox"        }
+
+             *   } else {
+             *
+             *   hide showShippingAddress div
+             *   show shippingInputBox div
+             *   save to mailingInfo
+             *
+             *   }
+            * */
+            document.getElementById('shippingFname').innerHTML = fName;
+            document.getElementById('shippingLname').innerHTML = lName;
+            document.getElementById('shippingAddress').innerHTML = address;
+            document.getElementById('shippingCity').innerHTML = city;
+            document.getElementById('shippingZipCode').innerHTML = zipCode;
+            }
+
+
+        //get or show shipping information
+
+        //display account info or show input boxes
+        //save radial selection
+        //save cookie selections
+        //tally cookie selections plus price
+        //save message box input
+        //after onclick confirm display order confirm order form
+        //after onclick order form confirm click display "Thank You for supporting Girl Scouts of America for 4 seconds"
+        //Then Reset page
+
+
+    </script>
+</head>
+<body>
+    <div id="main">
+        <form>
+            <header>
+                <img src="Imgs/GirlScoutLogo.png" class="logo">
+                <h1>Girl Scouts of America</h1>
+            </header>
+            <section class="accountInfo">
+                <fieldset>
+                    <h2>Account Info</h2><br>
+                    <div class="textBox">
+                        First Name: <input type="text" id="fname" onchange="getAccountInfo()">
+                        Last Name: <input type="text" id="lname" onchange="getAccountInfo()">
+                        Address: <input type="text" id="address" class="address" onchange="getAccountInfo()"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        City: <input type="text" id="city" onchange="getAccountInfo()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        Zipcode: <input type="number" id="zipcode" onchange="getAccountInfo()">
+                    </div>
+                </fieldset>
+
+            </section>
+            <section class="shippingInfo">
+                <fieldset>
+                    <h2>Shipping Information</h2><br>
+                    <div class="textBox">
+                        <!-- Radial Buttons -->
+                        <input type="radio" id="addressCopy">Use address for shipping &nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" id="addressEntry">Use separate address for shipping<br>
+
+                        <div id="showShippingAddress">
+
+                            <label>First Name:</label> <p id="shippingFname"></p>
+                            Last Name: <p id="shippingLname"></p>
+                            Address: <p id="shippingAddress"></p>
+                            City: <p id="shippingCity"></p>
+                            ZipCode: <p id="shippingCity"></p>
+                           <br>
+                        </div>
+                        <div id="shippingInputBox">
+                            First Name: <input type="text" id="shippingFname">&nbsp;&nbsp;&nbsp;
+                            Last Name: <input type="text" id="ShippingLname">
+                            Address: <input type="text" id="shippingAddress"><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            City: <input type="text" id="shippingCity">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            Zipcode: <input type="number" id="shippingZipcode"><br>
+                        </div>
+                    </div>
+
+                    <br>
+
+
+                </fieldset>
+            </section>
+            <section id="sectionCookies">
+                <fieldset>
+                <h2>Cookies</h2>
+                <ul>
+                    <li><div id="cookieBox">
+                            <img src="Imgs/Thin%20Mints.png" alt="Thin Mints">
+                            <div id="tallyBox">
+                                <p>Thin Mints <input type="checkbox" id="thinMints"></p><br>
+                                <p>Quantity <input type="number" id="thinMintsQuantity"></p><br>
+                                <p>$3.50 each</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="cookieBox">
+                            <img src="Imgs/Lemon%20Creme.png" alt="Lemon Creme">
+                            <div id="tallyBox">
+                                <p>Lemon Cremes <input type="checkbox" id="lemonCremes"></p><br>
+                                <p>Quantity <input type="number" id="lemonCremesQuantity"></p><br>
+                                <p>$3.50 each</p>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div id="cookieBox">
+                            <img src="Imgs/Sand%20Dollars.png" alt="Sand Dollars">
+                            <div id="tallyBox">
+                                <p>Sand Dollars <input type="checkbox" id="sandDollars"></p><br>
+                                <p>Quantity <input type="number" id="sandDollarsQuantity"></p><br>
+                                <p>$3.50 each</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul><br>
+                <ul>
+                    <li>
+                        <div id="cookieBox">
+                            <img src="Imgs/Do%20Si%20Do's.png" alt="Do Si Do's">
+                            <div id="tallyBox">
+                                <p>Do Si Do's <input type="checkbox" id="doSiDos"></p><br>
+                                <p>Quantity <input type="number" id="doSiDosQuantity"></p><br>
+                                <p>$3.50 each</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div id="cookieBox">
+                            <img src="Imgs/Chocolate%20Chips.png" alt="Chocolate Chips">
+                            <div id="tallyBox">
+                                <p>Chocolate Chips <input type="checkbox" id="chocolateChips"></p><br>
+                                <p>Quantity <input type="number" id="chocolateChipsQuantity"></p><br>
+                                <p>$3.50 each</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                </fieldset>
+            </section>
+            <section id="OrderInfo">
+                <div id="confirmOrderBox">
+                    <h3>Order #:<p id="orderNumber"></p></h3>
+                    <h4>Shipping To:</h4>
+                    <ul>
+                        <li>
+                            First Name: <p id="confirmFname"></p>
+                        </li>
+                        <li>
+                            Last Name: <p id="confirmLname"></p>
+                        </li>
+                        <li>
+                            Address: <p id="confirmAddress"></p>
+                        </li>
+                        <li>
+                           City: <p id="confirmCity"></p>
+                        </li>
+                        <li>
+                           Zip Code: <p id="confirmZipcode"></p>
+                        </li>
+                    </ul><br>
+                    <div>
+                        <table id="tallyList">
+                            <tr>
+                                <th>Product</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                            </tr>
+
+                            <tr>
+                                <td id="productName">Name</td>
+                                <td id="productQuantity">Quantity</td>
+                                <td id="productPriceTotal">Price</td>
+                            </tr>
+                            <tr>
+                                <td id="productName1">Name</td>
+                                <td id="productQuantity1">Quantity</td>
+                                <td id="productPriceTotal1">Price</td>
+                            </tr>
+                            <tr>
+                                <td id="productName2">Name</td>
+                                <td id="productQuantity2">Quantity</td>
+                                <td id="productPriceTotal2">Price</td>
+                            </tr>
+                            <tr>
+                                <td id="productName3">Name</td>
+                                <td id="productQuantity3">Quantity</td>
+                                <td id="productPriceTotal3">Price</td>
+                            </tr>
+                            <tr>
+                                <td id="productName4">Name</td>
+                                <td id="productQuantity4">Quantity</td>
+                                <td id="productPriceTotal4">Price</td>
+                            </tr>
+                            <tr>
+                                <td id="productName5">Name</td>
+                                <td id="productQuantity5">Quantity</td>
+                                <td id="productPriceTotal5">Price</td>
+                            </tr>
+                            <tr>
+
+                            </tr>
+
+                            <tr>
+                                <th>Grand Total</th>
+                                <th id="totalItems"></th>
+                                <th id="grandTotalPrice">$99.00</th>
+                            </tr>
+                        </table>
+                        <input type="submit" id="confirmSubmit">
+                    </div>
+                    <!--div id="tallyList">
+                        <div id="productName"><p>Product</p></div><div id="productQuantity"><p>#</p></div><div id="itemTotals"><p>Totals</p></div>
+                        <div id="productName1"><p>Product</p></div><div id="productQuantity1"><p>#</p></div><div id="itemTotals1"><p>Totals</p></div>
+                        <div id="productName2"><p>Product</p></div><div id="productQuantity2"><p>#</p></div><div id="itemTotals2"><p>Totals</p></div>
+                        <div id="productName3"><p>Product</p></div><div id="productQuantity3"><p>#</p></div><div id="itemTotals3"><p>Totals</p></div>
+                        <div id="productName3"><p>Product</p></div><div id="productQuantity3"><p>#</p></div><div id="itemTotals3"><p>Totals</p></div>
+                        <p>Grand Total</p> <p id="totalProductQuantity">#</p> <p id="grandPriceTotal">Totals</p>
+                    </div-->
+                </div>
+                <div id="orderInfoBox">
+                    <h2>Message</h2>
+                    <textarea id="buyerMessage"></textarea><br>
+                    <input type="submit" id="SubmitBtn">
+                </div>
+                <!--Opens a new window to confirm onclick submitBtn -->
+
+            </section>
+        </form>
+    </div>
+</body>
+</html>

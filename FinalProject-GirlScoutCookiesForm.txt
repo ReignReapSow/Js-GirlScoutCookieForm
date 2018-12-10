@@ -1,0 +1,18 @@
+Girl Scout Cookies
+The Girl Scouts of America have hired you to design a page for ordering their cookies.  Your page should gather all pertinent order information from a user and display the order results back.
+Section I
+Create a form that has several sections.  The first section, entitled “Account Info” should gather first name, last name, street address, city, state, and 5 digit zip code.  Each input should have its own textbox and label.  For state and zip code, the size of the textbox should be appropriate for the amount of characters it will hold.  This section should also contain 2 radio buttons.  The first button should read: “Use address for shipping”.  The second button should read: “Use separate shipping address.  If the user selects the first radio button, the fields in the shipping section should be populated with the address information in this section.  If the second radio button is selected, the fields in the shipping address should be cleared.
+Section II
+Create an additional section in the form entitled “Shipping Information”.  Gather street address, city, state, and 5 digit zip code.
+Section III
+Create a third section entitled “Cookies”.  This section should contain 2 labels, a checkbox, and a textbox for each of the 5 different types of cookies:
+1.	Thin Mints
+2.	Do Si Do’s
+3.	Lemon Cremes
+4.	Sand Dollars
+5.	Chocolate Chip
+The first label should display the name of the cookie and precede the checkbox.  The second label should say “Quantity” and precede the textbox.  The textbox should only be long enough to show 2 digits.
+Section IV
+The fourth section entitled “Order Info”should contain a textarea element and a submit button.  When the user clicks the button, your web page should calculate the total amount owed and display order information in the textarea.
+Requirements
+Your page should calculate the cost of the order based on the quantity and cookies that were selected.  Each box of cookies is $3.50.  If a user orders 10 boxes or more, there are no shipping costs.  If they order less than 10 boxes, shipping costs is 5% of the total order costs.  Pay close attention to aesthetics, as this will account for part of your overall grade.
